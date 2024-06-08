@@ -24,7 +24,7 @@ public class UserRepository {
 
         // todo: temp
         ArrayList<Authorities> authorities = new ArrayList<>();
-//        authorities.add(Authorities.READ);
+        authorities.add(Authorities.READ);
         return authorities;
 
 
