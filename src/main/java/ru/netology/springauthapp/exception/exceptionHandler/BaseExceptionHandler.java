@@ -16,6 +16,7 @@ public class BaseExceptionHandler {
 
     @ExceptionHandler(UnauthorizedUser.class)
     public ResponseEntity<String> handleUnauthorizedUser(UnauthorizedUser unauthorizedUser) {
-        return new ResponseEntity<>(unauthorizedUser.getMessage(), HttpStatus.NOT_FOUND);
+        System.out.printf("ERROR %s%n", unauthorizedUser.getMessage());
+        return new ResponseEntity<>(unauthorizedUser.getMessage(), HttpStatus.UNAUTHORIZED);
     }
 }
